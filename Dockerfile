@@ -4,7 +4,11 @@ MAINTAINER cthulhuplus
 
 ADD https://s3.amazonaws.com/Minecraft.Download/versions/1.11/minecraft_server.1.11.jar /dockcraft
 
-EXPOSE 
+EXPOSE 25565
+
+ENTRYPOINT ["java"]
+
+CMD ["-jar minecraft_server.1.11.jar nogui"] 
 
 #RUN apt-get update && apt-get upgrade
 
